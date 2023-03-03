@@ -1,15 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aula HTML</title>
+    <link rel="stylesheet" href = "style.css">
+    <style>
+        .forte {
+            font-weight: bold;
+        }
+        .destaque {   
+            color: red;
+        }
+        ul, ol {
+            color: chocolate;
+        }
+        ol, ol {
+            color: aqua
+        }
+        ul, ul {
+            color: green;
+        }
+        ul, ol {
+            color: darkred;
+        }
+        ol, ul {
+            color: chartreuse;
+        }
+        h1 + h1 {
+            font-size: small;
+        }
+        [href^='http']{
+            color: red;
+            font-weight:bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>
+    <h1 style="text-align: center">Aula HTML
 
     </h1>
+    <p>fundamentos de HTML</p>
+    <a href="#links">seção sobre links</a>
+    <h2>Tags HTML</h2>
+    <p> o que são e para que servem</p>
+
+    <h2>significado semântico das tags</h2>
     <h2>
         <div> A tag de bloco genérica é a div, e a tag <span style= "font-weight: bold;"> inline </span> genérica é a span</div>
         <span style="display: block;"> Mesmo tags genéricas <div style = "display: inline">podem</div> alterar seu comportamento</span>
@@ -20,16 +57,20 @@
     <ol>
         <li>1. Item a</li>
         <li>2. item b</li>
+        <ol>
             <li>Subitem 1</li>
             <li>Subitem 2</li>
+        </ol>
         <li>3.Item c</li>
     </ol>
     <h3>Listas não ordenadas</h3>
     <ul>
         <li>1. Item a</li>
         <li>2. Item b</li>
+        <ol>
             <li>Subitem 1</li>
             <li>Subitem 2</li>
+        </ol>
         <li>3. Item c</li>
     </ul>
     <h3>Listas de definição</h3>
