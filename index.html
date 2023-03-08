@@ -1,118 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula HTML</title>
-    <link rel="stylesheet" href = "style.css">
-    <style>
-        .forte {
-            font-weight: bold;
-        }
-        .destaque {   
-            color: red;
-        }
-        ul, ol {
-            color: chocolate;
-        }
-        ol, ol {
-            color: aqua
-        }
-        ul, ul {
-            color: green;
-        }
-        ul, ol {
-            color: darkred;
-        }
-        ol, ul {
-            color: chartreuse;
-        }
-        h1 + h1 {
-            font-size: small;
-        }
-        [href^='http']{
-            color: red;
-            font-weight:bold;
-        }
-    </style>
+    <title>Aulas desenvolvimento Web</title>
 </head>
 <body>
-    <h1 style="text-align: center">Aula HTML
-
-    </h1>
-    <p>fundamentos de HTML</p>
-    <a href="#links">seção sobre links</a>
-    <h2>Tags HTML</h2>
-    <p> o que são e para que servem</p>
-
-    <h2>significado semântico das tags</h2>
-    <h2>
-        <div> A tag de bloco genérica é a div, e a tag <span style= "font-weight: bold;"> inline </span> genérica é a span</div>
-        <span style="display: block;"> Mesmo tags genéricas <div style = "display: inline">podem</div> alterar seu comportamento</span>
-
-    </h2>
-    <h3> strong, em</h3>
-    <h3>listas ordenadas</h3>
-    <ol>
-        <li>1. Item a</li>
-        <li>2. item b</li>
-        <ol>
-            <li>Subitem 1</li>
-            <li>Subitem 2</li>
-        </ol>
-        <li>3.Item c</li>
-    </ol>
-    <h3>Listas não ordenadas</h3>
-    <ul>
-        <li>1. Item a</li>
-        <li>2. Item b</li>
-        <ol>
-            <li>Subitem 1</li>
-            <li>Subitem 2</li>
-        </ol>
-        <li>3. Item c</li>
-    </ul>
-    <h3>Listas de definição</h3>
-    <dl>
-        <dt>Termo</dt>
-        <dd>Significado</dd>
-        <dt> Manga</dt>
-        <dd> de camisa</dd>
-        <dd>fruta</dd>
-        <dt>aluno</dt>
-        <dt>estudante</dt>
-        <dd>que ainda está aprendendo</dd>
-    </dl>
-    <h2> Imagens</h2>
-    <img src="img/htmlcss.png" alt = "html & css">
-    <img src = "https://fboldt.github.io/images/javascript.png" alt=" javascript ">
-    
-    <h2> links</h2>
-    <p>Links podem ser dentro dda própria página, dentro do próprio site e links externos</p>
-    <h3>Links externos</h3>
-    <a href="https://google.com"> google </a>
-    <h3> dentro do site</h3>
-    <a href="about.html"> sobre</a>
-
-    <h3> dentro da pagina</h3>
-    <a href="#">topo</a>
-    <h2>formulários</h2>
-    <p>Formulários são mais interessantes com sites dinâmicos</p>
-    
-    <h3>Method GET</h3>
-    <form action="https://google.com/search" method="get">
-        <input type="text" name="q" placeholder="texto de busca">
-        <input type="submit" value="pequisar">
-    </form>
-
-    <h3>Method POST</h3>
-    <form action="action.html"method="POST">
-        <input type="text" name="test"
-        placeholder="texto qualquer">
-        <input type="submit" value="enviar">
-
-    </form>
-    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+    <h1>Aulas desenvolvimento Web</h1>
+    <p><a href = "html_css.html">HTML & CSS</a></p>
+    <a href = "javascript.html">Javascript</a>
+    <button onclick="const titulo = document.querySelector('h1')
+        titulo.textContent = 'Funcionou'">muda titulo</button>
+    <script>
+        
+    </script>
 </body>
 </html>
