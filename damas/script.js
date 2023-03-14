@@ -2,6 +2,10 @@
 const tamanhoCelula = 40;
 let pecaId = 0;
 document.querySelector('#tabuleiro').append(criaTabuleiro());
+// propriedades dos jogadores
+let turno = true
+let PontVermelho = 12
+let PontPreto = 12
 
 function criaTabuleiro() {
     const tamanho = 8;
@@ -63,4 +67,25 @@ function allowDrop(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("pecaid");
     ev.target.appendChild(document.getElementById(data));
+  }
+
+  function AltMovement ()
+  {
+    if (turno) {
+        turno = false
+        for(let i = 0; i < redTurnText.length; i++)
+        {
+            redTurnText[i].style.color = "lightGrey";
+            blackTurnText[i].style.color="black";
+        }
+    }else {
+        turno = true
+        for(let i = 0; i < blackTurnText.length; i++)
+        {
+            redTurnText[i].style.color = "black";
+            blackTurnText[i].style.color="lightGrey";
+        }
+
+    }
+
   }
