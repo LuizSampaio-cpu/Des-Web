@@ -1,9 +1,11 @@
 /* author: @fboldt */
-
-
 const tamanhoCelula = 40;
 let pecaId = 0;
-document.body.append(criaTabuleiro());
+document.querySelector('#tabuleiro').append(criaTabuleiro());
+// propriedades dos jogadores
+let turno = true
+let PontVermelho = 12
+let PontPreto = 12
 
 function criaTabuleiro() {
     const tamanho = 8;
@@ -43,11 +45,11 @@ function criaTabuleiro() {
 
 function criaPeca(cor) {
     let imagem = document.createElement('img');
+    imagem.id = pecaId++
     imagem.setAttribute('src', `img/${cor}.png`);
     imagem.setAttribute('width', `${tamanhoCelula-4}px`);
     imagem.setAttribute('height', `${tamanhoCelula-4}px`);
     imagem.setAttribute('draggable', "true");
-    imagem.setAttribute('id', pecaId++ )
     imagem.addEventListener('dragstart', drag)
     return imagem;
 }
@@ -64,6 +66,26 @@ function allowDrop(ev) {
   function drop(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("pecaid");
-
     ev.target.appendChild(document.getElementById(data));
+  }
+
+  function AltMovement ()
+  {
+    if (turno) {
+        turno = false
+        for(let i = 0; i < redTurnText.length; i++)
+        {
+            redTurnText[i].style.color = "lightGrey";
+            blackTurnText[i].style.color="black";
+        }
+    }else {
+        turno = true
+        for(let i = 0; i < blackTurnText.length; i++)
+        {
+            redTurnText[i].style.color = "black";
+            blackTurnText[i].style.color="lightGrey";
+        }
+
+    }
+
   }
