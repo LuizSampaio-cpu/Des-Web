@@ -1,5 +1,5 @@
 import express from 'express'
-import handlers from '../handlers/basic'
+import handlers from '../handlers/basic.js'
 
 const router = express.Router()
 router.get('/', handlers.home)

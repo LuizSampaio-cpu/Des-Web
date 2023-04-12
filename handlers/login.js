@@ -4,8 +4,8 @@ handlers.login = (req, res) => {
     const {email, senha} = req.body     
     const success = email == "asd" && senha == "123"
     if(success){
-        //req.session.username = "logado"
-        res.locals.username = "logado"
+        req.session.username = email
+        
         res.redirect("/")
     }
     else {
@@ -13,6 +13,13 @@ handlers.login = (req, res) => {
     }
 }
 
-handlers.logout = (req, res) => {res.send("logout")}
+handlers.logout = (req, res) => {
+    if(req.session.username)
+    {
+        delete req.session.username
+    }
+    res.redirect("/")
+
+}
 
 export default handlers
